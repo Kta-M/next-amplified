@@ -1,8 +1,8 @@
 import './globals.css';
 import { Noto_Sans_JP } from 'next/font/google';
 
-import ConfigureAmplifyClientSide from '@/components/auth/client/ConfigureAmplifyClientSide';
-import AuthProvider from '@/components/auth/client/AuthProvider';
+import ConfigureAmplifyClientSide from '@/components/auth/ConfigureAmplifyClientSide';
+import AuthProvider from '@/components/auth/AuthProvider';
 
 const notoSansJp = Noto_Sans_JP({ subsets: ['latin'] });
 

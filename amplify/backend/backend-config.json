@@ -52,5 +52,39 @@
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
     }
+  },
+  "function": {
+    "nextamplifiedlistusers": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "nextamplifiedcc993d35"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_nextamplifiedlistusers_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "nextamplifiedlistusers"
+        }
+      ]
+    },
+    "AMPLIFY_function_nextamplifiedlistusers_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "nextamplifiedlistusers"
+        }
+      ]
+    }
   }
 }

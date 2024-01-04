@@ -7,7 +7,7 @@ import { runWithAmplifyServerContext } from '@/utils/amplifyServerUtils';
 export const dynamic = 'force-dynamic';
 
 // ログインユーザーを取得して表示するコンポーネント(サーバー側で実行)
-export default async function AuthGetCurrentUserServer() {
+export default async function CurrentUser() {
   try {
     const currentUser = await runWithAmplifyServerContext({
       nextServerContext: { cookies },
@@ -16,7 +16,7 @@ export default async function AuthGetCurrentUserServer() {
 
     return (
       <div>
-        <pre>{JSON.stringify(currentUser, null, 2)}</pre>
+        User: {currentUser?.username ?? 'Unknown'}
       </div>
     );
   } catch (error) {

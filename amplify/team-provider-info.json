@@ -17,6 +17,12 @@
       },
       "auth": {
         "nextamplifiedcc993d35": {}
+      },
+      "function": {
+        "nextamplifiedlistusers": {
+          "deploymentBucketName": "amplify-nextamplified-dev-234605-deployment",
+          "s3Key": "amplify-builds/nextamplifiedlistusers-5a4e4f6e73616d4e5749-build.zip"
+        }
       }
     }
   }

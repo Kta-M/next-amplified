@@ -1,5 +1,14 @@
-type Todo @model @auth(rules: [{ allow: owner }]) {
-  id: ID!
-  name: String!
-  description: String
+type User {
+  email: String!
+  familyName: String
+  givenName: String
+  admin: Boolean!
+  enabled: Boolean!
+  status: String!
+}
+
+type Query {
+  listUsers: [User]
+    @function(name: "nextamplifiedlistusers-${env}")
+    @auth(rules: [ { allow: private, provider: userPools } ])
 }

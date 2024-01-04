@@ -1,11 +1,13 @@
-import AuthGetCurrentUserServer from '@/components/auth/server/AuthGetCurrentUserServer';
+import CurrentUser from '@/components/CurrentUser';
 import SignOutButton from '@/components/SignOutButton';
+import UserList from '@/components/UserList';
 
 export default async function Home() {
   return (
     <main>
-      <AuthGetCurrentUserServer />
+      <CurrentUser />
       <SignOutButton />
+      <UserList />
     </main>
   );
 }

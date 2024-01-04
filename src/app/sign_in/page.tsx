@@ -1,7 +1,7 @@
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { getAuthenticated } from '@/utils/amplifyServerUtils';
-import AuthenticatorClient from '@/components/auth/client/AuthenticatorClient';
+import AuthenticatorClient from '@/components/auth/AuthenticatorClient';
 
 export default async function Home() {
   const authenticated = await getAuthenticated({ cookies });
